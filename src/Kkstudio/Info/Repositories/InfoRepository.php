@@ -1,6 +1,6 @@
 <?php namespace Kkstudio\Info\Repositories;
 
-use Kkstudio\Blog\Models\Info as Model;
+use Kkstudio\Info\Models\Info as Model;
 
 class InfoRepository {
 
