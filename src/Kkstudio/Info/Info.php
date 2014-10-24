@@ -47,6 +47,8 @@ class Info extends \App\Module {
 
 		}
 
+		return $table;
+
 	}
 
 }
