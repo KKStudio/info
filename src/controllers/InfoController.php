@@ -25,7 +25,7 @@ class InfoController extends Controller {
 
 			$object = Info::where('key', 'avatar')->first();
 
-			if($object {
+			if($object) {
 
 				$object->value = $name;
 				$object->save();
