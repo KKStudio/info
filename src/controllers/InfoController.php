@@ -47,6 +47,8 @@ class InfoController extends Controller {
 
 		foreach($fields as $field) {
 
+			if(!\Request::get($field)) continue;
+
 			if(module('Info')->$field()) {
 
 				$object = Info::where('key', $field)->first();
