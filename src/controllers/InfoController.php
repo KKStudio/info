@@ -12,6 +12,8 @@ class InfoController extends Controller {
 
 	public function edit() {
 
+		\Request::$dontFlash = ['avatar'];
+
 		if(\Input::hasFile('avatar')) {
 
 			$name = \Str::random(32) . \Str::random(32) . '.png';
