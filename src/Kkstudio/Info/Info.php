@@ -51,4 +51,12 @@ class Info extends \App\Module {
 
 	}
 
+	public function getAvatar() {
+
+		if($this->avatar()) return asset('assets/info/' . module('Info')->avatar());
+		
+		return 'http://placehold.it/150x150';
+
+	}
+
 }

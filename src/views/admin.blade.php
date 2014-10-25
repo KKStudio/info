@@ -18,7 +18,7 @@
 
 		<br><br>
 
-		<img src="@if(module('Info')->avatar()) {{ asset('assets/info/' . module('Info')->avatar()) }} @else http://placehold.it/150x150 @endif" class="img-circle img-thumbnail">
+		<img src="{{ m('Info')->getAvatar() }}" class="img-circle img-thumbnail">
 		<br> 
 
 		<h3>{!! Form::label('avatar', 'Avatar') !!}</h3>
