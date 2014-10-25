@@ -15,7 +15,7 @@ class InfoController extends Controller {
 		if(\Input::hasFile('avatar')) {
 
 			$name = \Str::random(32) . \Str::random(32) . '.png';
-			$image = \Image::make(\Input::file('image')->getRealPath());
+			$image = \Image::make(\Input::file('avatar')->getRealPath());
 
             $image->resize(300, null, function ($constraint) {
 
