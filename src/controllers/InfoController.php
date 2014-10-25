@@ -71,7 +71,9 @@ class InfoController extends Controller {
 
 		}
 
-		return \Flash::success('Changes has been saved.');
+		\Flash::success('Changes has been saved.');
+
+		return \Redirect::back();
 
 	}
 
