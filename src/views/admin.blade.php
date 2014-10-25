@@ -16,7 +16,10 @@
 
 		<div class="clearfix"></div>
 
-		<br><br> 
+		<br><br>
+
+		<img src="@if(module('Info')->avatar()) asset('assets/info/' . module('Info')->avatar()) @else http://placehold.it/150x150 @endif" class="img-circle img-thumbnail">
+		<br> 
 
 		{!! Form::label('avatar', 'Avatar') !!}
 
