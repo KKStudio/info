@@ -19,6 +19,8 @@ class InfoServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('kkstudio/info');
+
+		\Route::get('admin/info', '\Kkstudio\Info\Controllers\InfoController@admin');
 	}
 
 	/**
