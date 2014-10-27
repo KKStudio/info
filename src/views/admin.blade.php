@@ -37,7 +37,7 @@
 		    <span class="btn btn-default btn-file">
 			    <span class="fileinput-new">Select image</span>
 			    <span class="fileinput-exists">Change</span>		    
-			    {!! Forsm::file('avatar', [ 'class' => 'form-control' ]) !!}
+			    {!! Form::file('avatar', [ 'class' => 'form-control' ]) !!}
 			    </span>
 		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 		  </div>
