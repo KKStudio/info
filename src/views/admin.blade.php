@@ -10,7 +10,7 @@
 
 @section('content')
 
-	<div class="col-sm-10 col-md-10 col-lg-8"> 
+	<div class=""> 
 
 	<p class="text-muted">Themes can use this data to display information about You. When you're ready save changes anytime you want.</p>
 
@@ -35,7 +35,7 @@
 
 		<h3>{!! Form::label('header', 'Header text') !!}</h3>
 
-		{!! Form::textarea('header', module('Info')->header(), [ 'class' => 'form-control input-lg', 'rows' => 3 ]) !!}
+		{!! Form::textarea('header', module('Info')->header(), [ 'class' => 'form-control input-lg', 'rows' => 1 ]) !!}
 
 		<h3>{!! Form::label('about', 'About text') !!}</h3>
 
