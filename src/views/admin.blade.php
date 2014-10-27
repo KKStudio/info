@@ -24,8 +24,6 @@
 
 		<br><br>
 
-		<div class="centered" style="text-align: center; ">
-
 		<h3>{!! Form::label('avatar', 'Avatar') !!}</h3>
 
 		<div class="fileinput fileinput-new" data-provides="fileinput">
@@ -42,10 +40,6 @@
 		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 		  </div>
 		</div>
-		
-		</div>
-
-
 		
 
 		<h3>{!! Form::label('header', 'Header text') !!}</h3>
@@ -67,6 +61,8 @@
 		{!! Form::submit('Save changes', [ 'class' => 'btn btn-lg btn-primary pull-right']) !!}
 
 	{!! Form::close() !!}
+
+		<br><br>
 
 	</div>
 
