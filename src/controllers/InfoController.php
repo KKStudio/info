@@ -17,7 +17,7 @@ class InfoController extends Controller {
 			$name = \Str::random(32) . \Str::random(32) . '.png';
 			$image = \Image::make(\Input::file('avatar')->getRealPath());
 
-            $image->resize(300, 300)->save(public_path('assets/info/' . $name));
+            $image->save(public_path('assets/info/' . $name));
 
 			$object = Info::where('key', 'avatar')->first();
 
