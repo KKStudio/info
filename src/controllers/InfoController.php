@@ -39,7 +39,7 @@ class InfoController extends Controller {
 
 		}
 
-		$fields = [ 'title', 'header', 'about', 'address' ];
+		$fields = [ 'name', 'title', 'header', 'about', 'address' ];
 
 		foreach($fields as $field) {
 
