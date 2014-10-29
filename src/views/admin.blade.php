@@ -32,6 +32,11 @@
 		</div>
 		
 
+		<h3>{!! Form::label('name', 'Name') !!}</h3>
+
+		{!! Form::textarea('name', module('Info')->name(), [ 'class' => 'form-control input-lg', 'rows' => 1 ]) !!}
+
+
 		<h3>{!! Form::label('header', 'Header text') !!}</h3>
 
 		{!! Form::textarea('header', module('Info')->header(), [ 'class' => 'form-control input-lg', 'rows' => 1 ]) !!}
