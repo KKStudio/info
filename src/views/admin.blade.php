@@ -30,6 +30,23 @@
 		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 		  </div>
 		</div>
+
+		<h3>{!! Form::label('cover', 'Cover photo') !!} <small>Some sites can use big photos as a background or cover picture</small></h3>
+
+		<div class="fileinput fileinput-new" data-provides="fileinput">
+		  <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
+		    <img src="{{ m('Info')->getCover() }}" >
+		  </div>
+		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+		  <div>
+		    <span class="btn btn-default btn-file">
+			    <span class="fileinput-new">Select image</span>
+			    <span class="fileinput-exists">Change</span>		    
+			    {!! Form::file('cover', [ 'class' => 'form-control' ]) !!}
+			    </span>
+		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+		  </div>
+		</div>
 		
 
 		<h3>{!! Form::label('name', 'Name') !!}</h3>
@@ -51,6 +68,10 @@
 		<h3>{!! Form::label('address', 'Your address') !!} <small>optional</small></h3>
 
 		{!! Form::textarea('address', module('Info')->address(), [ 'class' => 'form-control input-lg', 'rows' => 3 ]) !!}
+
+		<h3>{!! Form::label('footer', 'Footer text') !!} <small>some themes can put some text in footer area</small></h3>
+
+		{!! Form::textarea('footer', module('Info')->footer(), [ 'class' => 'form-control input-lg', 'rows' => 3 ]) !!}
 
 		{!! Form::submit('Save changes', [ 'class' => 'btn btn-lg btn-primary pull-right']) !!}
 

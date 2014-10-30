@@ -59,4 +59,12 @@ class Info extends \App\Module {
 
 	}
 
+	public function getCover() {
+
+		if($this->cover()) return asset('assets/info/' . module('Info')->cover());
+		
+		return 'http://placehold.it/1280x720';
+
+	}
+
 }

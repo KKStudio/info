@@ -39,7 +39,34 @@ class InfoController extends Controller {
 
 		}
 
-		$fields = [ 'name', 'title', 'header', 'about', 'address' ];
+		if(\Input::hasFile('cover')) {
+
+			$name = \Str::random(32) . \Str::random(32) . '.png';
+			$image = \Image::make(\Input::file('cover')->getRealPath());
+
+            $image->save(public_path('assets/info/' . $name));
+
+			$object = Info::where('key', 'cover')->first();
+
+			if($object) {
+
+				$object->value = $name;
+				$object->save();
+
+			} else {
+
+				Info::create([
+
+					'key' => 'cover',
+					'value' => $name
+
+				]);
+
+			}
+
+		}
+
+		$fields = [ 'name', 'title', 'header', 'about', 'address', 'footer' ];
 
 		foreach($fields as $field) {
 
