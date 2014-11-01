@@ -55,11 +55,11 @@
 
 		<h3>{!! Form::label('header', 'Header text') !!}</h3>
 
-		{!! Form::textarea('header', module('Info')->header(), [ 'class' => 'form-control input-lg', 'rows' => 1 ]) !!}
+		{!! Form::textarea('header', module('Info')->header(), [ 'class' => 'simple-editor form-control input-lg', 'rows' => 1 ]) !!}
 
 		<h3>{!! Form::label('about', 'About text') !!}</h3>
 
-		{!! Form::textarea('about', module('Info')->about(), [ 'class' => 'form-control input-lg', 'rows' => 3 ]) !!}
+		{!! Form::textarea('about', module('Info')->about(), [ 'class' => 'simple-editor form-control input-lg', 'rows' => 3 ]) !!}
 
 		<h3>{!! Form::label('title', 'Page title') !!}</h3>
 
@@ -71,7 +71,7 @@
 
 		<h3>{!! Form::label('footer', 'Footer text') !!} <small>some themes can put some text in footer area</small></h3>
 
-		{!! Form::textarea('footer', module('Info')->footer(), [ 'class' => 'form-control input-lg', 'rows' => 3 ]) !!}
+		{!! Form::textarea('footer', module('Info')->footer(), [ 'class' => 'simple-editor form-control input-lg', 'rows' => 3 ]) !!}
 
 		{!! Form::submit('Save changes', [ 'class' => 'btn btn-lg btn-primary pull-right']) !!}
 
