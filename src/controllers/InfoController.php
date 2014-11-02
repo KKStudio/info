@@ -96,7 +96,7 @@ class InfoController extends Controller {
 
 		}
 
-		\Flash::success('Changes has been saved.');
+		\Flash::success('Zmiany zostały zapisane.');
 
 		return \Redirect::back();
 

@@ -4,17 +4,15 @@
 
 	<div class=""> 
 
-	<p class="text-muted">Themes can use this data to display information about You. When you're ready save changes anytime you want.</p>
-
 	<div class="clearfix"></div> 
 
 	{!! Form::open([ 'url' => 'admin/info', 'files' => 'true' ]) !!}
 
-		{!! Form::submit('Save changes', [ 'class' => 'btn btn-lg btn-primary pull-right']) !!}
+		{!! Form::submit('Zapisz zmiany', [ 'class' => 'btn btn-lg btn-primary pull-right']) !!}
 
 		<div class="clearfix"></div>
 
-		<h3>{!! Form::label('avatar', 'Avatar') !!}</h3>
+		<h3>{!! Form::label('avatar', 'Logo') !!}</h3>
 
 		<div class="fileinput fileinput-new" data-provides="fileinput">
 		  <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
@@ -23,15 +21,15 @@
 		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 		  <div>
 		    <span class="btn btn-default btn-file">
-			    <span class="fileinput-new">Select image</span>
-			    <span class="fileinput-exists">Change</span>		    
+			    <span class="fileinput-new">Wybierz zdjęcie</span>
+			    <span class="fileinput-exists">Zmień</span>		    
 			    {!! Form::file('avatar', [ 'class' => 'form-control' ]) !!}
 			    </span>
-		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Usuń</a>
 		  </div>
 		</div>
 
-		<h3>{!! Form::label('cover', 'Cover photo') !!} <small>Some sites can use big photos as a background or cover picture</small></h3>
+		<h3>{!! Form::label('cover', 'Zdjęcie w tle') !!} <small>Niektóre szablony mogą używać tego zdjęcia.</small></h3>
 
 		<div class="fileinput fileinput-new" data-provides="fileinput">
 		  <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
@@ -40,40 +38,41 @@
 		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 		  <div>
 		    <span class="btn btn-default btn-file">
-			    <span class="fileinput-new">Select image</span>
-			    <span class="fileinput-exists">Change</span>		    
+			    <span class="fileinput-new">Wybierz zdjęcie</span>
+			    <span class="fileinput-exists">Zmień</span>		    
 			    {!! Form::file('cover', [ 'class' => 'form-control' ]) !!}
 			    </span>
-		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Usuń</a>
 		  </div>
 		</div>
 		
 
-		<h3>{!! Form::label('name', 'Name') !!}</h3>
+		<h3>{!! Form::label('name', 'Nazwa / Nazwisko') !!}</h3>
 
 		{!! Form::text('name', module('Info')->name(), [ 'class' => 'form-control input-lg', 'rows' => 1 ]) !!}
 
-		<h3>{!! Form::label('header', 'Header text') !!}</h3>
+		<h3>{!! Form::label('header', 'Nagłówek') !!}</h3>
 
 		{!! Form::textarea('header', module('Info')->header(), [ 'class' => 'simple-editor form-control input-lg', 'rows' => 1 ]) !!}
 
-		<h3>{!! Form::label('about', 'About text') !!}</h3>
+		<h3>{!! Form::label('about', 'O firmie / O mnie') !!}</h3>
 
 		{!! Form::textarea('about', module('Info')->about(), [ 'class' => 'simple-editor form-control input-lg', 'rows' => 3 ]) !!}
 
-		<h3>{!! Form::label('title', 'Page title') !!}</h3>
+		<h3>{!! Form::label('title', 'Tytuł strony') !!}</h3>
 
 		{!! Form::textarea('title', module('Info')->title(), [ 'class' => 'form-control input-lg', 'rows' => 1 ]) !!}
 
-		<h3>{!! Form::label('address', 'Your address') !!} <small>optional</small></h3>
+		<h3>{!! Form::label('address', 'Adres') !!} <small>opcjonalne</small></h3>
 
 		{!! Form::textarea('address', module('Info')->address(), [ 'class' => 'form-control input-lg', 'rows' => 3 ]) !!}
 
-		<h3>{!! Form::label('footer', 'Footer text') !!} <small>some themes can put some text in footer area</small></h3>
+		<h3>{!! Form::label('footer', 'Tekst w stopce') !!} <small>niektóre szablony mogą użyć tego tekstu na dole strony</small></h3>
 
 		{!! Form::textarea('footer', module('Info')->footer(), [ 'class' => 'simple-editor form-control input-lg', 'rows' => 3 ]) !!}
 
-		{!! Form::submit('Save changes', [ 'class' => 'btn btn-lg btn-primary pull-right']) !!}
+		<br>
+		{!! Form::submit('Zapisz zmiany', [ 'class' => 'btn btn-lg btn-primary pull-right']) !!}
 
 	{!! Form::close() !!}
 
