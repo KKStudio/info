@@ -17,8 +17,8 @@ class KkstudioCreateInfoTable extends Migration {
 			$table->increments('id');
 			$table->string('key');
 			$table->text('value');
-			$table->string('description');
-			$table->timestamps();
+			$table->string('description')->nullable();
+			$table->nullableTimestamps();
 
 		});
 	}
