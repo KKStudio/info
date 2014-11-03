@@ -20,7 +20,7 @@ class InfoServiceProvider extends ServiceProvider {
 	{
 		$this->package('kkstudio/info');
 
-		\Route::group([ 'middleware' => 'admin' ], function() {
+		\Route::group([ 'before' => 'admin' ], function() {
 
 			\Route::get('admin/info', '\Kkstudio\Info\Controllers\InfoController@admin');
 			\Route::post('admin/info', '\Kkstudio\Info\Controllers\InfoController@edit');
