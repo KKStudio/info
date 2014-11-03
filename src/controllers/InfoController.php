@@ -10,7 +10,7 @@ class InfoController extends Controller {
 		return \View::make('info::admin');
 	}
 
-	public function edit(\App\Http\Requests\ImageRequest $request) {
+	public function edit() {
 
 		if(\Input::hasFile('avatar')) {
 
