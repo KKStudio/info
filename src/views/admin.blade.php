@@ -12,22 +12,28 @@
 
 		<div class="clearfix"></div>
 
-		<h3>{!! Form::label('avatar', 'Logo') !!}</h3>
+		<div class="col-sm-6">
 
-		<div class="fileinput fileinput-new" data-provides="fileinput">
-		  <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
-		    <img src="{{ m('Info')->getAvatar() }}" >
-		  </div>
-		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
-		  <div>
-		    <span class="btn btn-default btn-file">
-			    <span class="fileinput-new">Wybierz zdjęcie</span>
-			    <span class="fileinput-exists">Zmień</span>		    
-			    {!! Form::file('avatar', [ 'class' => 'form-control' ]) !!}
-			    </span>
-		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Usuń</a>
-		  </div>
+			<h3>{!! Form::label('avatar', 'Logo') !!}</h3>
+
+			<div class="fileinput fileinput-new" data-provides="fileinput">
+			  <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
+			    <img src="{{ m('Info')->getAvatar() }}" >
+			  </div>
+			  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+			  <div>
+			    <span class="btn btn-default btn-file">
+				    <span class="fileinput-new">Wybierz zdjęcie</span>
+				    <span class="fileinput-exists">Zmień</span>		    
+				    {!! Form::file('avatar', [ 'class' => 'form-control' ]) !!}
+				    </span>
+			    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Usuń</a>
+			  </div>
+			</div>
+
 		</div>
+
+		<div class="col-sm-6">
 
 		<h3>{!! Form::label('cover', 'Zdjęcie w tle') !!} <small>Niektóre szablony mogą używać tego zdjęcia.</small></h3>
 
@@ -45,7 +51,10 @@
 		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Usuń</a>
 		  </div>
 		</div>
-		
+
+		</div>
+
+		<div class="clearfix"></div>		
 
 		<h3>{!! Form::label('name', 'Nazwa / Nazwisko') !!}</h3>
 
